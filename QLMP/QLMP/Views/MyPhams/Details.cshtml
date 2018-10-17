@@ -1,0 +1,42 @@
+﻿@model QLMP.Models.MyPham
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MyPham</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenMP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenMP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ThuongHieu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThuongHieu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TenCongDung)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenCongDung)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaMP }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

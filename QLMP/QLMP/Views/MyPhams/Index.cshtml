@@ -1,0 +1,47 @@
+﻿@model IEnumerable<QLMP.Models.MyPham>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>MY PHAM</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CongDung.TenCongDung)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TenMP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ThuongHieu)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CongDung.TenCongDung)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenMP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ThuongHieu)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.MaMP }) |
+                @Html.ActionLink("Details", "Details", new { id = item.MaMP }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.MaMP })
+            </td>
+        </tr>
+    }
+
+</table>
+
