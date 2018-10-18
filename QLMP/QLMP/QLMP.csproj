@@ -159,6 +159,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201810180642131_InitialCreate.cs" />
+    <Compile Include="Migrations\201810180642131_InitialCreate.Designer.cs">
+      <DependentUpon>201810180642131_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810180712043_Initial.cs" />
+    <Compile Include="Migrations\201810180712043_Initial.Designer.cs">
+      <DependentUpon>201810180712043_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CongDung.cs" />
     <Compile Include="Models\MyPham.cs" />
     <Compile Include="Models\QLMyPham.cs" />
@@ -203,10 +212,16 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\MyPhams\Index.cshtml" />
-    <Content Include="Views\CongDungs\Index.cshtml" />
+    <Content Include="Views\CongDungs\Create.cshtml" />
+    <Content Include="Views\CongDungs\Delete.cshtml" />
     <Content Include="Views\CongDungs\Details.cshtml" />
+    <Content Include="Views\CongDungs\Edit.cshtml" />
+    <Content Include="Views\CongDungs\Index.cshtml" />
+    <Content Include="Views\MyPhams\Create.cshtml" />
+    <Content Include="Views\MyPhams\Delete.cshtml" />
     <Content Include="Views\MyPhams\Details.cshtml" />
+    <Content Include="Views\MyPhams\Edit.cshtml" />
+    <Content Include="Views\MyPhams\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -223,6 +238,14 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201810180642131_InitialCreate.resx">
+      <DependentUpon>201810180642131_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810180712043_Initial.resx">
+      <DependentUpon>201810180712043_Initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
